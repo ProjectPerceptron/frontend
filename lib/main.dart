@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:perceptron/features/login/login_screen.dart';
+import 'package:perceptron/features/student/dashboard_screen.dart';
+import 'package:perceptron/features/student/student_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,9 +21,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
-        "/login" : (_) => const LoginPage()
+        "/login" : (_) => const LoginPage(),
+        "/student_screen": (_)=> MainScreen()
       },
-      initialRoute: "/login",
+      initialRoute: "/student_screen",
     );
   }
 }

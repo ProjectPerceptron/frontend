@@ -4,7 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:perceptron/core/constants/app_color.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -36,8 +36,8 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 60),
-                  Text(
+                  const SizedBox(height: 60),
+                  const Text(
                     "Welcome Back",
                     style: TextStyle(
                       color: AppColor.textDark,
@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     "Sign in to continue your learning journey",
                     style: TextStyle(
@@ -53,29 +53,29 @@ class _LoginPageState extends State<LoginPage> {
                       fontSize: 16,
                     ),
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   _buildEmailField(),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   _buildPasswordField(),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {
                         // Forgot password functionality
                       },
-                      child: Text(
+                      child: const Text(
                         "Forgot Password?",
                         style: TextStyle(
-                          color: AppColor.primayColor,
+                          color: AppColor.primaryColor,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   _buildLoginButton(),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   // _buildSignUpText(),
                 ],
               ),
@@ -90,11 +90,11 @@ class _LoginPageState extends State<LoginPage> {
     return TextFormField(
       controller: _emailController,
       keyboardType: TextInputType.emailAddress,
-      style: TextStyle(color: AppColor.textDark),
+      style: const TextStyle(color: AppColor.textDark),
       decoration: InputDecoration(
         labelText: "Email",
         hintText: "Enter your email address",
-        prefixIcon: Icon(Icons.email, color: AppColor.primayColor),
+        prefixIcon: const Icon(Icons.email, color: AppColor.primaryColor),
         labelStyle: TextStyle(color: AppColor.textDark.withOpacity(0.7)),
         hintStyle: TextStyle(color: AppColor.textDark.withOpacity(0.5)),
         filled: true,
@@ -105,15 +105,15 @@ class _LoginPageState extends State<LoginPage> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColor.primayColor, width: 2),
+          borderSide: const BorderSide(color: AppColor.primaryColor, width: 2),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.red, width: 1),
+          borderSide: const BorderSide(color: Colors.red, width: 1),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.red, width: 2),
+          borderSide: const BorderSide(color: Colors.red, width: 2),
         ),
       ),
       validator: (value) {
@@ -132,15 +132,15 @@ class _LoginPageState extends State<LoginPage> {
     return TextFormField(
       controller: _passwordController,
       obscureText: _obscurePassword,
-      style: TextStyle(color: AppColor.textDark),
+      style: const TextStyle(color: AppColor.textDark),
       decoration: InputDecoration(
         labelText: "Password",
         hintText: "Enter your password",
-        prefixIcon: Icon(Icons.lock, color: AppColor.primayColor),
+        prefixIcon: const Icon(Icons.lock, color: AppColor.primaryColor),
         suffixIcon: IconButton(
           icon: Icon(
             _obscurePassword ? Icons.visibility_off : Icons.visibility,
-            color: AppColor.primayColor,
+            color: AppColor.primaryColor,
           ),
           onPressed: () {
             setState(() {
@@ -158,15 +158,15 @@ class _LoginPageState extends State<LoginPage> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColor.primayColor, width: 2),
+          borderSide: const BorderSide(color: AppColor.primaryColor, width: 2),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.red, width: 1),
+          borderSide: const BorderSide(color: Colors.red, width: 1),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.red, width: 2),
+          borderSide: const BorderSide(color: Colors.red, width: 2),
         ),
       ),
       validator: (value) {
@@ -194,14 +194,14 @@ class _LoginPageState extends State<LoginPage> {
           }
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColor.primayColor,
+          backgroundColor: AppColor.primaryColor,
           foregroundColor: AppColor.textLight,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
           elevation: 0,
         ),
-        child: Text(
+        child: const Text(
           "Login",
           style: TextStyle(
             fontSize: 18,
@@ -221,7 +221,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             TextSpan(
               text: "Sign Up",
-              style: TextStyle(
+              style: const TextStyle(
                 color: AppColor.secondaryColor,
                 fontWeight: FontWeight.bold,
               ),
